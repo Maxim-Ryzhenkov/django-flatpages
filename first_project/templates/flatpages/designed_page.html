@@ -1,0 +1,29 @@
+{% extends 'flatpages/default.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ flatpage.title }}
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    {{ flatpage.title }}
+                </div>
+                <div class="card-body">
+                    {{ flatpage.content }}
+                </div>
+                <img src="{% static 'img/cover.png' %}" width="400" class="card-img-bottom ps-3 pe-3 pb-3 pt-3"
+                     alt="Ковер - образец искусства дизайна.">
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+<i>Страничка расположена в папке 'templates/flatpages/designed.html'</i>
+{% endblock content %}
